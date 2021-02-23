@@ -21,7 +21,6 @@ for ticker in tickers:
     newsTable = html.find(id = 'news-table')
     newsTables[ticker] = newsTable
 
-
 parsedData = []
 
 for ticker, newsTable in newsTables.items():
@@ -54,14 +53,3 @@ meanDf.plot(kind = 'bar')
 
 print(meanDf)
 plt.show()
-
-
-
-
-# amznData = newsTables['JPM']
-# amznRows = amznData.findAll('tr')
-#
-# for index, row in enumerate(amznRows):
-#     title = row.a.text
-#     timestamp = row.td.text
-#     print(timestamp + ' ' + title)
